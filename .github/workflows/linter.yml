@@ -22,12 +22,12 @@ jobs:
           version: v1.42.1
           args: --timeout=10m
           skip-go-installation: true
-      - name: Slack
-        uses: 8398a7/action-slack@v3
-        if: always()
-        with:
-          status: ${{ job.status }}
-          author_name: Lint Successful
-          fields: repo,commit,action,eventName
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+#       - name: Slack
+#         uses: 8398a7/action-slack@v3
+#         if: always()
+#         with:
+#           status: ${{ job.status }}
+#           author_name: Lint Successful
+#           fields: repo,commit,action,eventName
+#         env:
+#           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
