@@ -23,12 +23,12 @@ jobs:
       - name: Test
         run: go test -v -cover ./...
 
-      - name: Slack
-        uses: 8398a7/action-slack@v3
-        if: always()
-        with:
-          status: ${{ job.status }}
-          author_name: Test Successful
-          fields: repo,commit,action,eventName
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+#       - name: Slack
+#         uses: 8398a7/action-slack@v3
+#         if: always()
+#         with:
+#           status: ${{ job.status }}
+#           author_name: Test Successful
+#           fields: repo,commit,action,eventName
+#         env:
+#           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
